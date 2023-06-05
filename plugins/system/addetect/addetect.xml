@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="system" method="upgrade">
+	<name>plg_system_addetect</name>
+	<author>Kevin Olson</author>
+	<creationDate>2023-06</creationDate>
+	<copyright>(C) 2023 Kevin Olson.</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>kevin@kevinsguides.com</authorEmail>
+	<authorUrl>https://kevinsguides.com</authorUrl>
+	<version>1.0</version>
+	<description>PLG_SYSTEM_ADDETECT</description>
+	<files>
+		<filename plugin="addetect">addetect.php</filename>
+        <filename>LICENSE.txt</filename>
+        <folder>media</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/plg_system_addetect.ini</language>
+		<language tag="en-GB">en-GB/plg_system_addetect.sys.ini</language>
+	</languages>
+
+    <config>
+    		<fields name="params">
+        <fieldset name="general">
+            <field name="alerttype"
+            type="list"
+            default="default"
+            label="PLG_SYSTEM_ADDETECT_ALERT_LABEL"
+            description="PLG_SYSTEM_ADDETECT_ALERT_DESC"
+            >
+            <option value="default">Default Warning Message</option>
+            <option value="custommessage">Custom Message Dialog</option>
+            <option value="redirect">Redirect to URL</option>
+            <option value="module">Module Warning</option>
+            </field>
+
+            <field name="custommessage"
+            type="text"
+            showon="alerttype:custommessage"
+            default="Please disable your adblocker to continue."
+            label="PLG_SYSTEM_ADDETECT_CUSTOMMESSAGE_LABEL"
+            description="PLG_SYSTEM_ADDETECT_CUSTOMMESSAGE_DESC"
+            />
+
+            <field name="redirecturl"
+            type="text"
+            showon="alerttype:redirect"
+            default="https://kevinsguides.com"
+            label="PLG_SYSTEM_ADDETECT_REDIRECTURL_LABEL"
+            description="PLG_SYSTEM_ADDETECT_REDIRECTURL_DESC"
+            />
+
+
+            <field name="dismissable"
+            type="radio"
+            default="0"
+            class="btn-group btn-group-yesno"
+            showon="alerttype:custommessage,default"
+            label="PLG_SYSTEM_ADDETECT_DISMISSABLE_LABEL"
+            description="PLG_SYSTEM_ADDETECT_DISMISSABLE_DESC"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+            </field>
+
+            <field name="showonce"
+            type="radio"
+            default="0"
+            class="btn-group btn-group-yesno"
+            showon="alerttype:custommessage,default"
+            label="PLG_SYSTEM_ADDETECT_SHOWONCE"
+            description="PLG_SYSTEM_ADDETECT_SHOWONCE_DESC"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+            </field>
+
+
+        </fieldset>
+</fields>
+    </config>
+
+
+</extension>
