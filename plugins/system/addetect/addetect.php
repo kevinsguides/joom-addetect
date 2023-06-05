@@ -150,12 +150,14 @@ class PlgSystemAddetect extends CMSPlugin{
 
             $HTML = '
             <script type="text/javascript">
+            console.log("exists");
             setTimeout(function() {
                 fetch("https://www3.doubleclick.net", {
                 method: "HEAD",
                 mode: "no-cors",
                 cache: "no-store",
                 }).catch(()=>{
+                    console.log("executed");
                         document.getElementById("'.$randomid.'").style.display = "block";
                 });
                 }, 3500);
