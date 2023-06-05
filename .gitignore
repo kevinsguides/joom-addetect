@@ -20,3 +20,6 @@ administrator/language/en-GB
 modules/**
 !modules/mod_abd
 !modules/mod_abd/**
+
+!plg_addetect_updateserver.xml
+

@@ -1,0 +1,23 @@
+<updates>
+    <update>
+        <name>System - AdBlock Detector</name>
+        <element>addetect</element>
+        <type>plugin</type>
+        <version>1.0.0</version>
+        <client>administrator</client>
+        <folder>system</folder>
+        <infourl title="On Github...">https://github.com/kevinsguides/joom-addetect</infourl>
+        <downloads>
+        <downloadurl type="upgrade" format="zip">https://github.com/kevinsguides/stupid_simple_socials/releases/download/StupidSimpleSocialsModule/mod_stupidsimplesocials_v1.00.zip</downloadurl>
+        </downloads>
+        <tags>
+        <tag>stable</tag>
+        </tags>
+        <php_minimum>7.4</php_minimum>
+        <maintainer>Kevins Guides</maintainer>
+        <maintainerurl>https://kevinsguides.com</maintainerurl>
+        <infourl>https://kevinsguides.com</infourl>
+        <targetplatform name="joomla" version="4"/>
+        <changelogurl>https://github.com/kevinsguides/stupid_simple_socials/commits/main</changelogurl>
+        </update>
+</updates>

@@ -21,7 +21,7 @@
 
     <config>
     		<fields name="params">
-        <fieldset name="general">
+        <fieldset name="basic">
             <field name="alerttype"
             type="list"
             default="default"
@@ -79,6 +79,10 @@
         </fieldset>
 </fields>
     </config>
+
+    <updateservers>
+		<server type="extension" priority="1" name="System - AdBlock Detector">https://raw.githubusercontent.com/kevinsguides/stupid_simple_socials/main/mod_sss_updateserver.xml</server>
+	</updateservers>
 
 
 </extension>
