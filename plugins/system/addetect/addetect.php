@@ -10,6 +10,9 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\Event\SubscriberInterface;
 
+//module helper
+use Joomla\CMS\Helper\ModuleHelper;
+
 // phpcs:disable PSR1.Files.SideEffects
 \defined('_JEXEC') or die;
 
@@ -43,7 +46,6 @@ class PlgSystemAddetect extends CMSPlugin{
         $HTML = '';
         if ($alerttype == 'default'){
             $HTML = '
-            <h1>load</h1>
             <div id="'.$randomid.'">
             <div aria-hidden="true" style="display: none; position: absolute; width:100%; height: 100%; background: #000000b8; top: 0; left: 0; z-index: 10000; backdrop-filter: blur(3px);">
                 <img src="'.$plugin_dir.'/media/default.svg" style="max-width: 600px; top:50%; left:50%; transform: translate(-50%, -50%); position:absolute;"/>
@@ -136,7 +138,30 @@ class PlgSystemAddetect extends CMSPlugin{
                 });
                 }, 3500);
             </script>';
-            
+
+        }
+
+        if($alerttype == 'module'){
+
+            //get mod_abd
+            $module = ModuleHelper::getModule('mod_abd');
+
+            $module->content = '<div id="'.$randomid.'" style="display: none;">'.$module->content.'</div>';
+
+            $HTML = '
+            <script type="text/javascript">
+            setTimeout(function() {
+                fetch("https://www3.doubleclick.net", {
+                method: "HEAD",
+                mode: "no-cors",
+                cache: "no-store",
+                }).catch(()=>{
+                        document.getElementById("'.$randomid.'").style.display = "block";
+                });
+                }, 3500);
+            </script>
+            ';
+
         }
         
 

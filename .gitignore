@@ -15,3 +15,8 @@ administrator/language/en-GB
 !administrator/language/en-GB
 !administrator/language/en-GB/plg_system_addetect.ini
 !administrator/language/en-GB/plg_system_addetect.sys.ini
+
+!modules
+modules/**
+!modules/mod_abd
+!modules/mod_abd/**

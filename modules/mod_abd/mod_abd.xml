@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+	<name>mod_abd</name>
+	<author>Kevin Olson</author>
+	<creationDate>2023-06</creationDate>
+	<copyright>(C) 2023 OKevin Olson.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>kevin@kevinsguides.com</authorEmail>
+	<authorUrl>https://kevinsguides.com</authorUrl>
+	<version>1.0</version>
+	<description>MOD_ABD_XML_DESC</description>
+	<files>
+		<filename module="mod_abd">mod_abd.php</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">mod_abd.ini</language>
+		<language tag="en-GB">mod_abd.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="message"
+					type="editor"
+					label="MOD_ABD_FIELD_MESSAGE_LABEL"
+				/>
+				<field
+				name="wrapper"
+				type="list"
+				label="MOD_ABD_FIELD_WRAPPER_LABEL"
+				description="MOD_ABD_FIELD_WRAPPER_DESC"
+				default="none"
+				>
+				<option value="none">None</option>
+				<option value="bscard">Bootstrap Card - Default</option>
+				<option value="bscarddanger">Bootstrap Card - Danger</option>
+				<option value="boxwhitered">Box: White on Red </option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
