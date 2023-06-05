@@ -81,7 +81,7 @@
     </config>
 
     <updateservers>
-		<server type="extension" priority="1" name="System - AdBlock Detector">https://raw.githubusercontent.com/kevinsguides/stupid_simple_socials/main/mod_sss_updateserver.xml</server>
+		<server type="extension" priority="1" name="System - AdBlock Detector">https://raw.githubusercontent.com/kevinsguides/joom-addetect/main/plg_addetect_updateserver.xml</server>
 	</updateservers>
 
 

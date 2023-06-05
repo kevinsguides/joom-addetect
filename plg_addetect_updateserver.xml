@@ -8,7 +8,7 @@
         <folder>system</folder>
         <infourl title="On Github...">https://github.com/kevinsguides/joom-addetect</infourl>
         <downloads>
-        <downloadurl type="upgrade" format="zip">https://github.com/kevinsguides/stupid_simple_socials/releases/download/StupidSimpleSocialsModule/mod_stupidsimplesocials_v1.00.zip</downloadurl>
+        <downloadurl type="upgrade" format="zip">https://github.com/kevinsguides/joom-addetect/releases/download/v1.00/plg_system_adblockdetect_1.0.zip</downloadurl>
         </downloads>
         <tags>
         <tag>stable</tag>
